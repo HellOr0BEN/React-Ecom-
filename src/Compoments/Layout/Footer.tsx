@@ -3,57 +3,61 @@ import { Box, Grid, Typography, Stack, TextField, Button,Divider } from '@mui/ma
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import TopFooter from './TopFooter';
 
 
 const Footer = () => {
     return (
-        <Box component={'div'} sx={{ backgroundColor: 'black' }}>
-            <Stack direction={'column'} sx={{ padding: "10px 0px" }}>
+        <>
+            <TopFooter />
+            <Box component={'div'} sx={{ backgroundColor: 'black' }}>
+                <Stack direction={'column'} sx={{ padding: "10px 0px" }}>
 
-            <Grid container spacing={2} sx={{ margin: "0px", padding: "20px", width: "100%"}}>
-                <Grid item xs={3}>
-                    <Stack direction={'column'} gap={2}>
-                        <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Info Details</Typography>
-                        <ContactDetails />
+                <Grid container spacing={2} sx={{ margin: "0px", padding: "20px", width: "100%"}}>
+                    <Grid item xs={3}>
+                        <Stack direction={'column'} gap={2}>
+                            <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Info Details</Typography>
+                            <ContactDetails />
 
-                    </Stack>
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={2} >
+                        <Stack direction={'column'}  gap={2}>
+                            <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Contact Details</Typography>
+                            <Pages />
+
+                        </Stack>
+
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Stack direction={'column'} gap={2}>
+                            <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Shops</Typography>
+                            <Shop />
+
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Stack direction={'column'} gap={2}>
+                            <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Customer Services</Typography>
+                            <CustomerServices />
+
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Stack direction={'column'} gap={2}>
+                            <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>NEWSLETTERS</Typography>
+                            <WeeklyNewsLetter />
+
+                        </Stack>
+                    </Grid>
                 </Grid>
-                <Grid item xs={2} >
-                    <Stack direction={'column'}  gap={2}>
-                        <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Contact Details</Typography>
-                        <Pages />
+                <Divider sx={{backgroundColor:'gray',marginTop:'10px'}} />
+                <SocialMediaGroup/>
+                <Typography sx={{color:'white', textAlign:'center'}}>&copy; 2021 Prajwal Bossman</Typography>
+                </Stack>
 
-                    </Stack>
-
-                </Grid>
-                <Grid item xs={2}>
-                    <Stack direction={'column'} gap={2}>
-                        <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Shops</Typography>
-                        <Shop />
-
-                    </Stack>
-                </Grid>
-                <Grid item xs={2}>
-                    <Stack direction={'column'} gap={2}>
-                        <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Customer Services</Typography>
-                        <CustomerServices />
-
-                    </Stack>
-                </Grid>
-                <Grid item xs={3}>
-                    <Stack direction={'column'} gap={2}>
-                        <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>NEWSLETTERS</Typography>
-                        <WeeklyNewsLetter />
-
-                    </Stack>
-                </Grid>
-            </Grid>
-            <Divider sx={{backgroundColor:'gray',marginTop:'10px'}} />
-            <SocialMediaGroup/>
-            <Typography sx={{color:'white', textAlign:'center'}}>&copy; 2021 Prajwal Bossman</Typography>
-            </Stack>
-
-        </Box>
+            </Box>
+        </>
     )
 }
 
