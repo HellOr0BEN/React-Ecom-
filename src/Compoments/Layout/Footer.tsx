@@ -8,9 +8,9 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 const Footer = () => {
     return (
         <Box component={'div'} sx={{ backgroundColor: 'black' }}>
-            <Stack direction={'column'}>
+            <Stack direction={'column'} sx={{ padding: "10px 0px" }}>
 
-            <Grid container spacing={2} sx={{ margin: 0 }}>
+            <Grid container spacing={2} sx={{ margin: "0px", padding: "20px", width: "100%"}}>
                 <Grid item xs={3}>
                     <Stack direction={'column'} gap={2}>
                         <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>Info Details</Typography>
@@ -40,7 +40,7 @@ const Footer = () => {
 
                     </Stack>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={3}>
                     <Stack direction={'column'} gap={2}>
                         <Typography sx={{ color: 'white',fontWeight:'bold' }} variant='h5'>NEWSLETTERS</Typography>
                         <WeeklyNewsLetter />
@@ -57,7 +57,6 @@ const Footer = () => {
     )
 }
 
-export default Footer
 
 
 const ContactDetails = () => {
@@ -125,3 +124,5 @@ const SocialMediaGroup = () => {
         </Stack>
     )
 }
+
+export default Footer;

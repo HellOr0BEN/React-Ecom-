@@ -6,7 +6,7 @@ const Header = () => {
     
     <AppBar position='static' >
         <Toolbar>
-        <Stack direction={'row'} alignItems='center' justifyContent={'space-evenly'} >
+        <Stack direction={'row'} alignItems='center' justifyContent={'space-between'} width="100%"  >
         <Typography>Discount Offer</Typography>
         <Button variant='text' color='inherit'>Login/Register</Button>
     </Stack>

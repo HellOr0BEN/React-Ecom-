@@ -1,12 +1,10 @@
-// import Footer from "./Compoments/Layout/Footer";
-import Header from "./Compoments/Layout/Header";
+import Layout from "./Compoments/Layout/Layout";
+
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-     
-     
+      <Layout />
     </div>
   );
 }
