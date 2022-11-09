@@ -9,14 +9,19 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 //Mui icon
 
 const TextOverlay = styled(Box)`
+    position: absolute;
+    top: 0px;
+    left: 0px;
     display: ${(props: any) => props.display? "flex": "none"};
     flex-direction: column;
+    align-items:center;
+    justify-content: center;
     gap: 20px;
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.8);
     color: white;
     cursor: pointer;
-    padding: 30px;
+    padding: 50px;
 
 `;
 const GridContainer = styled(Stack)`
@@ -131,9 +136,8 @@ const ImageBox = ({image}: {image: string}) => {
             </Box>
             {/* Text Overlay */}
             <TextOverlay 
-                display={display} 
-                sx={{position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%"}}>
-                    <Stack direction="row" spacing={4}>
+                display={display}>
+                    <Stack direction="row" spacing={4} sx={{justifyContent: "flex-start", width: "100%"}}>
                         <Typography sx={{display: "flex", gap: "10px"}}>
                             <FavoriteBorderOutlinedIcon/>
                             <Typography>101</Typography>
