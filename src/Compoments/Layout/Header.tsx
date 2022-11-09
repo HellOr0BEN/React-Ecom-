@@ -1,11 +1,14 @@
 import React from 'react'
-import { Stack, Typography, Button, AppBar, Toolbar, Container, Link, Menu, MenuItem } from '@mui/material'
+import { Stack, Typography, Button, AppBar, Toolbar, Container, Link } from '@mui/material'
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import SearchIcon from '@mui/icons-material/Search';
 const Header = () => {
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "black" }}>
+      <AppBar position="static"  sx={{ backgroundColor: "black" }}>
         <Container maxWidth="xl">
           <Toolbar>
             <Stack
@@ -23,7 +26,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <AppBar position="static" sx={{ backgroundColor: "black" }}>
+      <AppBar position='sticky'  sx={{ backgroundColor: "black" }}>
         <Container maxWidth="xl">
           <Toolbar>
             <Stack
@@ -34,9 +37,14 @@ const Header = () => {
             >
               <Typography variant="h4">LoGo</Typography>
               <Stack direction={"row"} gap={5}>
-                <NavLinks/>
+                <NavLinks />
               </Stack>
-              <PersonPinIcon />
+              <Stack direction={'row'} gap={2}>
+
+                <ShoppingCartIcon />
+                <FavoriteBorderIcon />
+                <SearchIcon />
+              </Stack>
             </Stack>
           </Toolbar>
         </Container>
@@ -51,47 +59,47 @@ export default Header
 const NavLinks = () => {
   return (
     <>
-      <Link underline='hover' sx={{color:'white'}}>
-        <Typography  sx={{ color: "white",fontWeight:'bold' }}>
+      <Link underline='hover' sx={{ color: 'white' }}>
+        <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Audio
             <KeyboardArrowDownIcon />
           </Stack>
         </Typography>
       </Link>
-      <Link underline='hover' sx={{color:'white'}}>
-        <Typography sx={{ color: "white",fontWeight:'bold' }}>
+      <Link underline='hover' sx={{ color: 'white' }}>
+        <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Energy
             <KeyboardArrowDownIcon />
           </Stack>
         </Typography>
       </Link>
-      <Link underline='hover' sx={{color:'white'}}>
-        <Typography sx={{ color: "white",fontWeight:'bold' }}>
+      <Link underline='hover' sx={{ color: 'white' }}>
+        <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Protection
             <KeyboardArrowDownIcon />
           </Stack>
         </Typography>
       </Link>
-      <Link underline='hover' sx={{color:'white'}}>
-        <Typography sx={{ color: "white",fontWeight:'bold' }}>
+      <Link underline='hover' sx={{ color: 'white' }}>
+        <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Life
             <KeyboardArrowDownIcon />
           </Stack>
         </Typography>
       </Link>
-      <Link underline='hover' sx={{color:'white'}}>
-        <Typography sx={{ color: "white",fontWeight:'bold' }}>
+      <Link underline='hover' sx={{ color: 'white' }}>
+        <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Sale
             <KeyboardArrowDownIcon />
           </Stack>
         </Typography>
       </Link>
-     
+
     </>
   )
 }
