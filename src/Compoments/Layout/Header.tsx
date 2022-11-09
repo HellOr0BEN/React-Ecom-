@@ -1,7 +1,7 @@
 import React from 'react'
 import { Stack, Typography, Button, AppBar, Toolbar, Container, Link } from '@mui/material'
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from '@mui/icons-material/Search';
@@ -36,7 +36,7 @@ const Header = () => {
               width="100% "
             >
               <Typography variant="h4">LoGo</Typography>
-              <Stack direction={"row"} gap={5}>
+              <Stack direction={"row"} gap={8}>
                 <NavLinks />
               </Stack>
               <Stack direction={'row'} gap={2}>
@@ -63,7 +63,7 @@ const NavLinks = () => {
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Audio
-            <KeyboardArrowDownIcon />
+            
           </Stack>
         </Typography>
       </Link>
@@ -71,7 +71,7 @@ const NavLinks = () => {
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Energy
-            <KeyboardArrowDownIcon />
+            
           </Stack>
         </Typography>
       </Link>
@@ -79,7 +79,7 @@ const NavLinks = () => {
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Protection
-            <KeyboardArrowDownIcon />
+            
           </Stack>
         </Typography>
       </Link>
@@ -87,7 +87,7 @@ const NavLinks = () => {
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Life
-            <KeyboardArrowDownIcon />
+            
           </Stack>
         </Typography>
       </Link>
@@ -95,7 +95,7 @@ const NavLinks = () => {
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Sale
-            <KeyboardArrowDownIcon />
+            
           </Stack>
         </Typography>
       </Link>
