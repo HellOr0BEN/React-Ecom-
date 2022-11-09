@@ -23,7 +23,7 @@ const GridContainer = styled(Stack)`
     width: 100%;
     margin: 0px;
     padding: 0px;
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -34,8 +34,8 @@ const GridContainer = styled(Stack)`
 `;
 const CustomButton = styled(Button)`
     position: absolute !important;
-    top: 0px !important;
-    transform: translate(0, 50%) !important;
+    top: 150px !important;
+    transform: translate(0, -50px) !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -61,6 +61,21 @@ const RightBtn = styled(CustomButton)`
 
 
 const TopFooter = () => {
+
+    const imageList = [
+        "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/375751/pexels-photo-375751.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://images.pexels.com/photos/4041181/pexels-photo-4041181.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://images.pexels.com/photos/440320/pexels-photo-440320.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://images.pexels.com/photos/12969242/pexels-photo-12969242.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://images.pexels.com/photos/9793689/pexels-photo-9793689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ]
+
     const containerElem = useRef<any>();
 
     const handleScrollLeft = async () => {
@@ -83,16 +98,12 @@ const TopFooter = () => {
     
     return(
         <Box sx={{position: "relative"}}>
-            <GridContainer direction="row" ref={containerElem} id="he">
-                <ImageBox image="https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/03/How-to-Find-the-Model-Number-on-a-Laptop.jpg?fit=2000%2C1125&ssl=1"/>
-                <ImageBox image="https://i.pcmag.com/imagery/reviews/045TJmP8CVMXUwBN5ayR68W-1..v1655402303.jpg"/>
-                <ImageBox image="https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/03/How-to-Find-the-Model-Number-on-a-Laptop.jpg?fit=2000%2C1125&ssl=1"/>
-                <ImageBox image="https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/03/How-to-Find-the-Model-Number-on-a-Laptop.jpg?fit=2000%2C1125&ssl=1"/>
-                <ImageBox image="https://i.pcmag.com/imagery/reviews/045TJmP8CVMXUwBN5ayR68W-1..v1655402303.jpg"/>
-                <ImageBox image="https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/03/How-to-Find-the-Model-Number-on-a-Laptop.jpg?fit=2000%2C1125&ssl=1"/>
-                <ImageBox image="https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/03/How-to-Find-the-Model-Number-on-a-Laptop.jpg?fit=2000%2C1125&ssl=1"/>
-                <ImageBox image="https://i.pcmag.com/imagery/reviews/045TJmP8CVMXUwBN5ayR68W-1..v1655402303.jpg"/>
-                <ImageBox image="https://i0.wp.com/www.alphr.com/wp-content/uploads/2022/03/How-to-Find-the-Model-Number-on-a-Laptop.jpg?fit=2000%2C1125&ssl=1"/>
+            <GridContainer direction="row" ref={containerElem}>
+                {
+                    imageList.map((item, index) => (
+                        <ImageBox key={index} image={item} />
+                    ))
+                }
             </GridContainer>
             <LeftBtn onClick={handleScrollLeft}>
                 <ArrowBackIosIcon/>
