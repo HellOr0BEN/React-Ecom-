@@ -8,8 +8,13 @@ import DataUsageIcon from '@mui/icons-material/DataUsage';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 import styled from 'styled-components'
+
 import StaticSection from './StaticSection';
 import Location from './Location';
+
+import CategoryScroll from './scrollArea/CategoryScroll';
+import ItemScroll from './scrollArea/ItemScroll';
+
 
 
 
@@ -82,8 +87,13 @@ const LandingPage = () => {
         </Grid>
       </BoxContainer>
       <SubComponent />
+
       <StaticSection/>
       <Location/>
+
+      <CategoryScroll />
+      <ItemScroll title="Our top products" />
+
 
     </>
 
