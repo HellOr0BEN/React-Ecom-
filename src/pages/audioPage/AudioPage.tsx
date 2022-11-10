@@ -4,6 +4,7 @@ import styled from "styled-components";
 import bannerImg from "../../assets/banner/audiobanner.jpg";
 import MainContainer from "./sections/MainContainer";
 import SectionContainer from "./sections/SectionContainer";
+import SidebarContainer from "./sections/SidebarContainer";
 //Banner image
 
 const AudioPage = () => {
