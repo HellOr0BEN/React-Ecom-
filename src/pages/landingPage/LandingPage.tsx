@@ -24,6 +24,7 @@ padding:0;
 height:70vh;
 background-image:url(${image1});
 background-size:cover;
+position:relative;
 
 
 `
@@ -33,7 +34,22 @@ padding:0;
 height:70vh;
 background-image:url(${image2});
 background-size:cover;
+position:relative;
 
+`
+
+const CustomStack = styled(Stack)`
+color:white;
+
+align-items:center;
+justify-content:center;
+gap:20px;
+padding:20px;
+background:rgba(0,0,0,0);
+position:absolute;
+bottom:0px;
+left:50%;
+transform:translate(-50%,0%);
 `
 
 const LandingPage = () => {
@@ -43,19 +59,19 @@ const LandingPage = () => {
         <Grid container gap={1} >
           <GridComp1 item xs={6}>
 
-            <Stack sx={{ color: 'white' }} alignItems={'center'} justifyContent={'center'} gap={2} >
-              <Typography>Gadgets Craze</Typography>
+            <CustomStack  >
+              <Typography variant='h6' sx={{fontWeight:'bold'}}>Gadgets Craze</Typography>
               <Button variant={'outlined'} sx={{ color: 'white', borderRadius: '5px', border: '1px solid white' }}>SHOP</Button>
-            </Stack>
+            </CustomStack>
 
 
 
           </GridComp1>
           <GridComp2 item xs={5.9}>
-            <Stack sx={{ color: 'white' }} alignItems='center' justifyContent={'center'} gap={2} >
-              <Typography>Gadgets Craze</Typography>
+            <CustomStack >
+              <Typography variant='h6' sx={{fontWeight:'bold'}}>Gadgets Craze</Typography>
               <Button variant={'outlined'} sx={{ color: 'white', borderRadius: '5px', border: '1px solid white' }}>SHOP</Button>
-            </Stack>
+            </CustomStack>
 
           </GridComp2>
 
