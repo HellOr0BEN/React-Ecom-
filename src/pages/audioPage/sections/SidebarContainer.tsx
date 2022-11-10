@@ -1,6 +1,6 @@
 import {Box} from "@mui/material";
 
-const const SidebarContainer = () => {
+const SidebarContainer = () => {
     return(
         <Box>
 
