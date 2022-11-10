@@ -23,8 +23,8 @@ import ItemScroll from './scrollArea/ItemScroll';
 const BoxContainer = styled(Box)`
 width:100%;
 background-color:black;
-
-
+padding-top: 20px;
+padding-bottom: 50px;
 `
 const GridComp1 = styled(Grid)`
 margin:0;
