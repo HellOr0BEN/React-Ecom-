@@ -1,10 +1,27 @@
 import React from 'react'
-import { Stack, Typography, Button, AppBar, Toolbar, Container, Link } from '@mui/material'
+import { Stack, Typography, Button, AppBar, Toolbar, Container } from '@mui/material';
+import { Link } from 'react-router-dom';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from '@mui/icons-material/Search';
+import styled from "styled-components";
+
+
+const CustLink = styled(Link)`
+  display: bold;
+  color: white !important;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 2px solid rgba(0,0,0,0);
+
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+
+`;
+
 const Header = () => {
   return (
     <>
@@ -59,46 +76,46 @@ export default Header
 const NavLinks = () => {
   return (
     <>
-      <Link underline='hover' sx={{ color: 'white' }}>
+      <CustLink to="/audio">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Audio
             
           </Stack>
         </Typography>
-      </Link>
-      <Link underline='hover' sx={{ color: 'white' }}>
+      </CustLink>
+      <CustLink to="/">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Energy
             
           </Stack>
         </Typography>
-      </Link>
-      <Link underline='hover' sx={{ color: 'white' }}>
+      </CustLink>
+      <CustLink to="/">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Protection
             
           </Stack>
         </Typography>
-      </Link>
-      <Link underline='hover' sx={{ color: 'white' }}>
+      </CustLink>
+      <CustLink to="/">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Life
             
           </Stack>
         </Typography>
-      </Link>
-      <Link underline='hover' sx={{ color: 'white' }}>
+      </CustLink>
+      <CustLink to="/">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Sale
             
           </Stack>
         </Typography>
-      </Link>
+      </CustLink>
 
     </>
   )
