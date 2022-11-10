@@ -7,8 +7,7 @@ import { Box, Link, Typography } from '@mui/material';
 
 
 const CustBox = styled(Box)`
-margin-top:10px;
-margin-bottom:10px;
+margin: 5px 0px;
 width:100%;
 background-image:url(${image5});
 background-color:black;
