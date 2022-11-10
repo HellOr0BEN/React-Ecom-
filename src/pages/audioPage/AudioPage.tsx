@@ -9,7 +9,7 @@ import SidebarContainer from "./sections/SidebarContainer";
 
 const AudioPage = () => {
     return(
-        <Stack spacing={4}>
+        <Box>
             <TopSection />
             <SectionContainer>
                 <>
@@ -18,7 +18,7 @@ const AudioPage = () => {
                 </>
                 
             </SectionContainer>
-        </Stack>
+        </Box>
     );
 }
 
