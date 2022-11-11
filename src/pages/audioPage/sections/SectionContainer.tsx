@@ -1,10 +1,16 @@
 import { Stack } from "@mui/material";
+import styled from "styled-components";
+
+const Section = styled(Stack)`
+    position: relative; padding: 80px;
+    background: #EEF0F2;
+`;
 
 const SectionContainer = ({children}: {children: JSX.Element}) => {
     return(
-        <Stack direction="row" sx={{padding: "80px 30px", background: "#f5f6f7"}}>
+        <Section direction="row">
             {children}
-        </Stack>
+        </Section>
     )
 }
 
