@@ -3,14 +3,14 @@ import { Box, Grid, Typography, Stack, TextField, Button,Divider } from '@mui/ma
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import TopFooter from './TopFooter';
+
 
 
 
 const Footer = () => {
     return (
         <>
-            <TopFooter />
+            
             <Box component={'div'} sx={{ backgroundColor: 'black' }}>
                 <Stack direction={'column'} sx={{ padding: "10px 0px" }}>
 

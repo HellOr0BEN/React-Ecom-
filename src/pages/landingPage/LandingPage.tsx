@@ -14,6 +14,7 @@ import Location from './Location';
 
 import CategoryScroll from './scrollArea/CategoryScroll';
 import ItemScroll from './scrollArea/ItemScroll';
+import TopFooter from '../../Compoments/Layout/TopFooter';
 
 
 
@@ -91,6 +92,7 @@ const LandingPage = () => {
       <StaticSection/>
       <ItemScroll title="Our top products" />
       <Location/>
+      <TopFooter />
 
       
       
