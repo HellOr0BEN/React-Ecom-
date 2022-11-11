@@ -22,6 +22,11 @@ width:450px;
 height:500px;
 object-fit:cover;
 `
+const YelloLine = styled(Box)`
+height:5px;
+width:250px;
+background-color:#FF9C25;
+`
 
 
 
@@ -46,6 +51,7 @@ const Location = () => {
     <CustBox>
       <Typography variant='body1' component={'div'}>LOCATION</Typography>
       <Typography variant='h4'>Our Flagship Stores</Typography>
+      <YelloLine/>
       <Grid container>
         {
           MockData.map((item) => {
