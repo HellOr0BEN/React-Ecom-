@@ -87,12 +87,13 @@ const LandingPage = () => {
         </Grid>
       </BoxContainer>
       <SubComponent />
-
+      <CategoryScroll />
       <StaticSection/>
+      <ItemScroll title="Our top products" />
       <Location/>
 
-      <CategoryScroll />
-      <ItemScroll title="Our top products" />
+      
+      
 
 
     </>
