@@ -2,11 +2,14 @@
 import { Box, Button, Grid, Stack, Typography } from '@mui/material'
 import image1 from '../../assets/image1.jpg';
 import image2 from '../../assets/image2.jpg';
+
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import DataUsageIcon from '@mui/icons-material/DataUsage';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 import styled from 'styled-components'
+import StaticSection from './StaticSection';
+import Location from './Location';
 
 
 
@@ -79,6 +82,8 @@ const LandingPage = () => {
         </Grid>
       </BoxContainer>
       <SubComponent />
+      <StaticSection/>
+      <Location/>
 
     </>
 
