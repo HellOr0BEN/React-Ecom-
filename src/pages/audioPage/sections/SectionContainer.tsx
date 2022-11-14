@@ -4,11 +4,12 @@ import styled from "styled-components";
 const Section = styled(Stack)`
     position: relative; padding: 80px;
     background: #EEF0F2;
+    align-items: start;
 `;
 
 const SectionContainer = ({children}: {children: JSX.Element}) => {
     return(
-        <Section direction="row">
+        <Section direction="row" spacing={6}>
             {children}
         </Section>
     )
