@@ -71,7 +71,7 @@ const ResetBtnContent = ({title}: {title: string}) => {
 const PriceFilter = () => {
     const [price, setPrice] = useState(80);
     const calcPrice = useMemo(() => {
-        const minValue = 90;
+        const minValue = 0;
         const maxValue = 900;
 
         let tempPrice = price === 0 ? minValue: (maxValue * (price/100));
@@ -109,7 +109,7 @@ const CityFilter = () => {
 const ShippingFilter = () => {
     const checkboxTitles = ["Regular", "Express", "FedEx", "Cargo", "Delight", "Same Day"];
     return(
-        <Stack spacing={2} sx={{padding: "20px 30px", borderBottom: "1px solid rgba(0,0,0,0.3)"}}>
+        <Stack spacing={2} sx={{padding: "20px 30px"}}>
             <CustFilter title="City" border={false} btnTitle={
                 <ResetBtnContent title="Hide"/>
             }/>
