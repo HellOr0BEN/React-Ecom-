@@ -1,10 +1,12 @@
 import { Box, Grid } from "@mui/material";
+import Product from "../product/Product";
 import ImageList from "./ImageList";
 import InformationSection from "./InformationSection";
 
 const AudioItem = () => {
     return(
-        <Box sx={{padding: "50px 20px"}}>
+        <>
+         <Box sx={{padding: "50px 20px"}}>
             {/*Top Section*/}
             <Grid container spacing={4}>
                 <Grid item xs={6}>
@@ -16,6 +18,10 @@ const AudioItem = () => {
             </Grid>
             {/*Top Section*/}
         </Box>
+        <Product/>
+        </>
+       
+
     )
 }
 export default AudioItem;
