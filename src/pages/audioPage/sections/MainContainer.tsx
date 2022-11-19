@@ -7,9 +7,12 @@ import headphone from '../../../assets/audiodevice/headphone.jpg'
 import pods from '../../../assets/audiodevice/pods.jpg'
 import headsets from '../../../assets/audiodevice/headsets.jpg'
 import BasicRating from "../../../Compoments/rating/ReactRating";
+import { useContext } from "react";
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+import { AppContext } from "../../../Context/AppContext";
+
 const ImgContainer = styled.img`
 display:block;
 width:100%;
@@ -58,6 +61,8 @@ const AudioData = [{
 
 
 const MainContainer = () => {
+    const {addToCart,SetAddToCart} = useContext(AppContext);
+    
     return (
         <CustBox >
             <TopDiv />
@@ -73,7 +78,7 @@ const MainContainer = () => {
                                     <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
                                         <Typography sx={{ fontWeight: 'bold' }}>{data.price}</Typography>
                                         <Tooltip title="More Details">
-                                            <IconButton>
+                                            <IconButton href="/audio/:name">
                                                 <InfoOutlinedIcon />
                                             </IconButton>
                                         </Tooltip>
@@ -82,7 +87,9 @@ const MainContainer = () => {
                                     <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
                                     <BasicRating />
                                     <Tooltip title="Add to cart">
-                                            <IconButton>
+                                            <IconButton onClick={() => SetAddToCart(
+                                                addToCart + 1
+                                            )} >
                                                 <AddShoppingCartOutlinedIcon />
                                             </IconButton>
                                         </Tooltip>

@@ -1,10 +1,14 @@
 import Layout from "./Compoments/Layout/Layout";
+import AppContextContainer from "./Context/AppContext";
 
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <AppContextContainer>
+
+        <Layout />
+      </AppContextContainer>
     </div>
   );
 }

@@ -1,12 +1,14 @@
-import React from 'react'
+
 import { Stack, Typography, Button, AppBar, Toolbar, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-
+import { useContext } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from '@mui/icons-material/Search';
 import styled from "styled-components";
+import { Box } from '@mui/system';
+import { AppContext } from '../../Context/AppContext';
 
 
 const CustLink = styled(Link)`
@@ -23,9 +25,10 @@ const CustLink = styled(Link)`
 `;
 
 const Header = () => {
-  return (
+  const {addToCart} = useContext(AppContext)
+   return (
     <>
-      <AppBar position="static"  sx={{ backgroundColor: "black" }}>
+      <AppBar position="static" sx={{ backgroundColor: "black" }}>
         <Container maxWidth="xl">
           <Toolbar>
             <Stack
@@ -43,7 +46,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <AppBar position='sticky'  sx={{ backgroundColor: "black" }}>
+      <AppBar position='sticky' sx={{ backgroundColor: "black" }}>
         <Container maxWidth="xl">
           <Toolbar>
             <Stack
@@ -52,13 +55,24 @@ const Header = () => {
               justifyContent={"space-between"}
               width="100% "
             >
-              <Typography variant="h4">LoGo</Typography>
+              <CustLink to='/' >
+                <Typography variant="h4">LoGo</Typography>
+              </CustLink>
+
               <Stack direction={"row"} gap={8}>
-                <NavLinks />
+                <NavLinks  />
               </Stack>
               <Stack direction={'row'} gap={2}>
+                <Stack direction={'row'}>
+                  
+                  <ShoppingCartIcon />
+                  
+                  <Box sx={{ borderRadius: "50%", background: "yellow", height: "20px", width: "20px", position: 'relative', bottom: '10px', right: '10px', display:"flex",justifyContent:"center" }} >
+                    {/* sx={{ border: '1px solid white', borderRadius: '50%', position: 'relative', bottom: '20px', right: '5px', width: '30px', height: '30px' }} */}
+                    <Typography sx={{color:"black" }}>{addToCart}</Typography>
+                  </Box>
+                </Stack>
 
-                <ShoppingCartIcon />
                 <FavoriteBorderIcon />
                 <SearchIcon />
               </Stack>
@@ -76,43 +90,43 @@ export default Header
 const NavLinks = () => {
   return (
     <>
-      <CustLink to="/audio">
+      <CustLink to="/audio"  >
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Audio
-            
+
           </Stack>
         </Typography>
       </CustLink>
-      <CustLink to="/">
+      <CustLink to="/energy">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Energy
-            
+
           </Stack>
         </Typography>
       </CustLink>
-      <CustLink to="/">
+      <CustLink to="/protection">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Protection
-            
+
           </Stack>
         </Typography>
       </CustLink>
-      <CustLink to="/">
+      <CustLink to="/life">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Life
-            
+
           </Stack>
         </Typography>
       </CustLink>
-      <CustLink to="/">
+      <CustLink to="/sale">
         <Typography sx={{ color: "white", fontWeight: 'bold' }}>
           <Stack direction={'row'} alignItems='center' sx={{ cursor: 'pointer' }}>
             Sale
-            
+
           </Stack>
         </Typography>
       </CustLink>
