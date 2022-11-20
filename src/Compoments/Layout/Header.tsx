@@ -62,16 +62,20 @@ const Header = () => {
               <Stack direction={"row"} gap={8}>
                 <NavLinks  />
               </Stack>
+            
               <Stack direction={'row'} gap={2}>
+                { addToCart !==0 ? (
                 <Stack direction={'row'}>
                   
                   <ShoppingCartIcon />
+                 
                   
                   <Box sx={{ borderRadius: "50%", background: "yellow", height: "20px", width: "20px", position: 'relative', bottom: '10px', right: '10px', display:"flex",justifyContent:"center" }} >
                     {/* sx={{ border: '1px solid white', borderRadius: '50%', position: 'relative', bottom: '20px', right: '5px', width: '30px', height: '30px' }} */}
                     <Typography sx={{color:"black" }}>{addToCart}</Typography>
                   </Box>
-                </Stack>
+                </Stack> ) : (<ShoppingCartIcon />)
+                }
 
                 <FavoriteBorderIcon />
                 <SearchIcon />
